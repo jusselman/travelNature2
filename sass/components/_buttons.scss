@@ -30,11 +30,21 @@
     }
   }
   &--green {
-    background-color: $color-white;
-    color: #777;
+    backface-visibility: hidden;
+    background-image: linear-gradient(
+      to left,
+      rgba($primary-color-dark, 0.8),
+      rgba($secondary-color-dark, 0.8)
+    );
+    color: $color-white;
     &::after {
-      background-color: $color-white;
-      color: #777;
+      backface-visibility: hidden;
+      background-image: linear-gradient(
+        to left,
+        rgba($primary-color-dark, 0.8),
+        rgba($secondary-color-dark, 0.8)
+      );
+      color: $color-white;
     }
   }
   &::after {
@@ -54,7 +64,6 @@
     animation-fill-mode: backwards;
   }
 }
-
 .btn-text {
   &:link,
   &:visited {
@@ -72,15 +81,11 @@
     box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(-2px);
   }
-
   &:active {
     box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(0);
   }
 }
-
-//   &:hover {
-//   }
-
-//   &: active;
+// &:hover {
 // }
+// &: active;
