@@ -12,27 +12,31 @@ html {
   // @include respond(phone) {
   //   font-size: 50%; //1 rem = 9px, 8/16
   // }
-  @include respond(tab-port) {
-    font-size: 50%; //1 rem = 9px, 8/16
-  }
 
   @include respond(tab-land) {
-    font-size: 56.25%; //1 rem = 9px, 9/16
+    font-size: 56.25%; //1 rem = 9px, 9/16, width < 1200
   }
 
-  @include respond(big-desktop) {
-    font-size: 75%; // 1rem = 12, 12/16
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 9px, 8/16, width <
   }
 }
 
+// @include respond(phone) {
+//   font-size: 10%; //1 rem = 9px, 8/16
+// }
+
+@include respond(big-desktop) {
+  font-size: 75%; // 1rem = 12, 12/16
+}
+
 body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: $color-grey-dark;
   padding: 3.5rem;
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
 
 // @media (max-width: )
