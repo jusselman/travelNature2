@@ -51,6 +51,13 @@
   &__left {
     width: 33.33333%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      width: 100%;
+      display: grid;
+      grid-area: left;
+      grid-template-areas: 'left left';
+    }
   }
   &__right {
     width: 66.66667%;
@@ -59,6 +66,28 @@
     padding: 3rem 5rem;
     border: hidden;
     // background-color: blue;
+    @include respond(tab-land) {
+      width: 100%;
+      display: grid;
+      grid-area: right;
+      grid-template-areas: 'right';
+    }
+    &__btn {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      border-radius: 10rem;
+      transition: all 0.2s;
+      position: relative;
+      font-size: 1.6rem;
+      border: none;
+      cursor: pointer;
+
+      @include respond(tab-port) {
+        margin: 0 auto !important;
+      }
+    }
   }
 
   &__text {

@@ -9,9 +9,9 @@
 html {
   font-size: 62.5%; // 1rem = 10px/16px = 62.5% //
 
-  // @include respond(phone) {
-  //   font-size: 50%; //1 rem = 9px, 8/16
-  // }
+  @include respond(phone) {
+    font-size: 37.5%; //
+  }
 
   @include respond(tab-land) {
     font-size: 56.25%; //1 rem = 9px, 9/16, width < 1200
