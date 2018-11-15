@@ -44,6 +44,8 @@
       rgba($secondary-color-dark, 0.8)
     );
     color: $color-white;
+    margin: 0 auto;
+
     &::after {
       backface-visibility: hidden;
       background-image: linear-gradient(

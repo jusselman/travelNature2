@@ -209,7 +209,8 @@ body {
 .btn--green {
   backface-visibility: hidden;
   background-image: linear-gradient(to left, rgba(101, 121, 19, 0.8), rgba(16, 86, 111, 0.8));
-  color: #fff; }
+  color: #fff;
+  margin: 0 auto; }
   .btn--green::after {
     backface-visibility: hidden;
     background-image: linear-gradient(to left, rgba(101, 121, 19, 0.8), rgba(16, 86, 111, 0.8));
@@ -545,6 +546,9 @@ body {
     font-size: 3rem;
     text-decoration: none;
     display: inline-block; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__close:link, .popup__close:visited {
+        top: 0.25rem; } }
   .popup__close:hover {
     color: #637b00; }
   .popup__content {
@@ -561,6 +565,9 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: all 0.4s 0.2s; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__content {
+        width: 90%; } }
   .popup__left {
     width: 33.33333%;
     display: table-cell; }
@@ -582,20 +589,9 @@ body {
         display: grid;
         grid-area: right;
         grid-template-areas: 'right'; } }
-    .popup__right__btn {
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 1.5rem 4rem;
-      display: inline-block;
-      border-radius: 10rem;
-      transition: all 0.2s;
-      position: relative;
-      font-size: 1.6rem;
-      border: none;
-      cursor: pointer; }
-      @media only screen and (max-width: 56.25em) {
-        .popup__right__btn {
-          margin: 0 auto !important; } }
+  @media only screen and (max-width: 75em) and (max-width: 37.5em) {
+    .popup__right {
+      padding: 2rem; } }
   .popup__text {
     font-size: 1.5rem;
     margin-bottom: 4rem;
@@ -609,9 +605,24 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__text {
+        display: grid;
+        grid-template-areas: 'heading', 'sub', 'paragraph', 'paragraph';
+        padding: 0;
+        margin-bottom: 0.5rem; }
+        .popup__textheading-secondary {
+          grid-area: 'heading'; }
+        .popup__textheading-tertiary {
+          grid-area: 'sub'; }
+        .popup__textpopup__text {
+          grid-area: 'paragraph'; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__img {
+        display: none; } }
 
 .story {
   width: 75%;
@@ -690,6 +701,10 @@ body {
     .row {
       max-width: 50rem;
       padding: 0 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .row {
+      width: 90%;
+      padding: 0 1rem; } }
   .row::after {
     content: '';
     display: table;
@@ -963,6 +978,9 @@ body {
 .section-booking {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, rgba(101, 121, 19, 0.65), rgba(16, 86, 111, 0.85)); }
+  @media only screen and (max-width: 37.5em) {
+    .section-booking {
+      padding: 10rem 0; } }
 
 .book {
   background-image: linear-gradient(104deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
