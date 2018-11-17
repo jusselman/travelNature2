@@ -34,10 +34,14 @@
     // @include respond(tab-land) {
     //   margin-left: 4rem;
     // }
+    @include respond(tab-land) {
+      margin-left: 5rem;
+    }
 
     @include respond(tab-port) {
       width: 100%;
       text-align: center;
+      margin-left: 0;
     }
   }
 
